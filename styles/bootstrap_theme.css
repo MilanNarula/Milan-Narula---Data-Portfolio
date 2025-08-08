@@ -1,0 +1,185 @@
+/*
+Bootstrap theme customizations for F1 Analytics Portfolio
+Defines color scheme, typography, and component overrides
+*/
+
+/* CSS Variables for F1 Theme */
+:root {
+    --f1-primary: #FF6B35;
+    --f1-secondary: #F7931E;
+    --f1-accent: #FFCD3C;
+    --f1-dark: #FFE3BB;
+    --f1-light: #262730;
+    --f1-text: #FFFFFF;
+    --f1-muted: #8E9297;
+    
+    /* Bootstrap overrides */
+    --bs-primary: var(--f1-primary);
+    --bs-primary-rgb: 255, 107, 53;
+    --bs-secondary: var(--f1-secondary);
+    --bs-secondary-rgb: 247, 147, 30;
+    --bs-warning: var(--f1-accent);
+    --bs-dark: var(--f1-dark);
+    --bs-light: var(--f1-light);
+    --bs-body-bg: var(--f1-dark);
+    --bs-body-color: var(--f1-text);
+}
+
+/* Global Styles */
+body {
+    background: var(--f1-dark) !important;
+    color: var(--f1-text) !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Bootstrap Component Overrides */
+.bg-dark {
+    background-color: var(--f1-dark) !important;
+}
+
+.bg-light {
+    background-color: var(--f1-light) !important;
+}
+
+.text-light {
+    color: var(--f1-text) !important;
+}
+
+.text-muted {
+    color: var(--f1-muted) !important;
+}
+
+/* Button Styles */
+.btn-primary {
+    background: linear-gradient(45deg, var(--f1-primary), var(--f1-secondary));
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, var(--f1-secondary), var(--f1-accent));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+.btn-outline-primary {
+    color: var(--f1-primary);
+    border-color: var(--f1-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--f1-primary);
+    border-color: var(--f1-primary);
+    color: white;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--f1-light);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.2);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--f1-primary), var(--f1-secondary));
+    border-bottom: none;
+    color: white;
+    font-weight: 600;
+}
+
+/* Progress Bar Styles */
+.progress {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    height: 20px;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--f1-primary), var(--f1-secondary));
+    border-radius: 10px;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Badge Styles */
+.badge {
+    font-weight: 600;
+    padding: 0.5em 0.8em;
+    border-radius: 20px;
+}
+
+.badge.bg-primary {
+    background: var(--f1-primary) !important;
+}
+
+.badge.bg-secondary {
+    background: var(--f1-secondary) !important;
+}
+
+.badge.bg-warning {
+    background: var(--f1-accent) !important;
+    color: var(--f1-dark) !important;
+}
+
+/* Alert Styles */
+.alert {
+    border-radius: 10px;
+    border-left: 4px solid var(--f1-primary);
+}
+
+.alert-info {
+    background-color: rgba(255, 107, 53, 0.1);
+    border-color: var(--f1-primary);
+    color: var(--f1-primary);
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-color: #28a745;
+    color: #28a745;
+}
+
+/* Form Controls */
+.form-control {
+    background-color: var(--f1-light);
+    border: 2px solid rgba(255, 107, 53, 0.3);
+    border-radius: 8px;
+    color: var(--f1-text);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--f1-light);
+    border-color: var(--f1-primary);
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+    color: var(--f1-text);
+}
+
+.form-select {
+    background-color: var(--f1-light);
+    border: 2px solid rgba(255, 107, 53, 0.3);
+    color: var(--f1-text);
+}
+
+.form-select:focus {
+    border-color: var(--f1-primary);
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+}

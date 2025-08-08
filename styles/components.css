@@ -1,0 +1,277 @@
+/*
+Custom component styles for F1 Analytics Portfolio
+Includes cards, animations, and interactive elements
+*/
+
+/* Custom F1 Components */
+.f1-hero {
+    background: linear-gradient(135deg, var(--f1-dark) 0%, var(--f1-light) 50%, var(--f1-dark) 100%);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.f1-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+    animation: slideLight 3s infinite;
+}
+
+@keyframes slideLight {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.project-card {
+    background: linear-gradient(135deg, var(--f1-light) 0%, #2d3142 100%);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1rem 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--f1-primary), var(--f1-secondary));
+    transition: width 0.3s ease;
+}
+
+.project-card:hover::before {
+    width: 8px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(255, 107, 53, 0.3);
+    border-color: var(--f1-primary);
+}
+
+/* Metric Cards */
+.metric-card {
+    background: var(--f1-light);
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    background-clip: padding-box;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(45deg, var(--f1-primary), var(--f1-secondary), var(--f1-accent));
+}
+
+.metric-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(255, 107, 53, 0.3);
+    color:  white;
+}
+
+.metric-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, var(--f1-primary), var(--f1-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+/* Skill Progress Bars */
+.skill-container {
+    margin: 1rem 0;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.skill-bar {
+    height: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--f1-primary), var(--f1-secondary), var(--f1-accent));
+    border-radius: 15px;
+    transition: width 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Navigation Components */
+.navbar-f1 {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* keep it above other elements */
+    background: linear-gradient(90deg, var(--f1-primary) 0%, var(--f1-secondary) 50%, var(--f1-primary) 100%);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+
+/* Remove Streamlit default top padding */
+.block-container {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Push all page content down so it's not hidden behind navbar */
+.main > div {
+    padding-top: 70px !important; /* match navbar height */
+}
+
+
+.navbar-f1 .nav-link {
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+}
+
+.navbar-f1 .nav-link:hover,
+.navbar-f1 .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer-f1 {
+    background: var(--f1-light);
+    border-top: 2px solid var(--f1-primary);
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-radius: 10px;
+}
+
+/* Loading Animations */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 107, 53, 0.3);
+    border-left: 4px solid var(--f1-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Button Animations */
+.btn-f1-primary {
+    background: linear-gradient(45deg, var(--f1-primary), var(--f1-secondary));
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    flex: 0.5 1 auto;
+}
+
+.btn-f1-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-f1-primary:hover::before {
+    left: 100%;
+}
+
+.btn-f1-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+    background: linear-gradient(45deg, var(--f1-secondary), var(--f1-accent));
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .metric-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .f1-hero {
+        padding: 3rem 1rem;
+    }
+    
+    .project-card {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+    
+    .metric-card {
+        padding: 1.5rem;
+    }
+    
+    .metric-number {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,159 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\geometry{margin=0.75in}
+
+% Color definitions
+\definecolor{primarycolor}{RGB}{255, 107, 53}
+\definecolor{secondarycolor}{RGB}{247, 147, 30}
+\definecolor{accentcolor}{RGB}{255, 205, 60}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primarycolor,
+    urlcolor=primarycolor,
+    pdfborder={0 0 0}
+}
+
+% Custom section formatting
+\titleformat{\section}{\Large\bfseries\color{primarycolor}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{20pt}{10pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge \textbf{\textcolor{primarycolor}{Your Name}}}\\[0.3cm]
+    {\Large \textbf{Data Scientist \& F1 Analytics Specialist}}\\[0.5cm]
+    
+    \faEnvelope \hspace{0.1cm} \href{mailto:your.email@gmail.com}{your.email@gmail.com} \hspace{0.5cm}
+    \faPhone \hspace{0.1cm} +1 (555) 123-4567 \hspace{0.5cm}
+    \faLinkedin \hspace{0.1cm} \href{https://linkedin.com/in/yourprofile}{LinkedIn} \hspace{0.5cm}
+    \faGithub \hspace{0.1cm} \href{https://github.com/yourusername}{GitHub}
+\end{center}
+
+\vspace{0.5cm}
+
+% Professional Summary
+\section{Professional Summary}
+Experienced data scientist and analytics professional with 5+ years of expertise in motorsport telemetry analysis, interactive dashboard development, and real-time data processing. Proven track record of delivering actionable insights through advanced visualization and statistical modeling, with specialized knowledge in Formula 1 data analysis serving 10,000+ users globally.
+
+% Professional Experience
+\section{Professional Experience}
+
+\textbf{Senior Data Analyst - F1 Analytics Solutions} \hfill \textit{Jan 2022 - Present}\\
+\textit{New York, NY}
+\begin{itemize}[leftmargin=0.5in, itemsep=0pt]
+    \item Developed interactive F1 telemetry analysis dashboard using Python and Streamlit, serving 10,000+ active users with 99.9\% uptime
+    \item Implemented real-time data processing pipelines handling 1M+ telemetry records daily using FastF1 API and optimized caching systems
+    \item Created automated reporting systems reducing manual analysis work by 75\% and improving team productivity
+    \item Led cross-functional team of 5 data professionals in delivering analytics solutions for motorsport teams and enthusiasts
+    \item Optimized database queries and visualization rendering, achieving 40\% faster dashboard loading times
+    \item Designed responsive web interfaces using Bootstrap 5 and custom CSS, supporting mobile and desktop platforms
+\end{itemize}
+
+\textbf{Data Analyst - Data Solutions Inc.} \hfill \textit{Jun 2020 - Dec 2021}\\
+\textit{Boston, MA}
+\begin{itemize}[leftmargin=0.5in, itemsep=0pt]
+    \item Built predictive models for customer behavior analysis using machine learning algorithms (Random Forest, XGBoost)
+    \item Designed and maintained ETL pipelines for multi-source data integration processing 500GB+ daily
+    \item Created executive dashboards using Tableau and Power BI, providing real-time business intelligence
+    \item Improved data processing efficiency by 60\% through code optimization and infrastructure improvements
+    \item Collaborated with stakeholders to translate business requirements into technical solutions
+\end{itemize}
+
+% Technical Skills
+\section{Technical Skills}
+
+\textbf{Programming Languages:} Python (Expert), SQL (Advanced), R (Intermediate), JavaScript (Intermediate), HTML/CSS\\
+\textbf{Data Analysis \& Visualization:} Pandas, NumPy, SciPy, Plotly, Streamlit, Matplotlib, Seaborn, Tableau, Power BI\\
+\textbf{Machine Learning:} Scikit-learn, TensorFlow, PyTorch, XGBoost, Random Forest, Time Series Analysis\\
+\textbf{Specialized APIs:} FastF1 (Expert), Sports Data APIs, Financial Data APIs\\
+\textbf{Databases:} PostgreSQL, MySQL, MongoDB, Redis, InfluxDB (Time Series)\\
+\textbf{Web Technologies:} Bootstrap 5, Responsive Design, RESTful APIs, FastAPI\\
+\textbf{Cloud \& DevOps:} AWS (EC2, S3, RDS), Docker, Git, CI/CD, Linux\\
+\textbf{Tools:} Jupyter, VS Code, LaTeX, Figma, Adobe Creative Suite
+
+% Featured Projects
+\section{Featured Projects}
+
+\textbf{F1 Telemetry Analysis Dashboard} \hfill \href{https://your-app-url.streamlit.app}{Live Demo}
+\begin{itemize}[leftmargin=0.5in, itemsep=0pt]
+    \item Comprehensive web application for Formula 1 data analysis with real-time telemetry comparison and interactive track visualization
+    \item Technologies: Python, Streamlit, FastF1 API, Plotly, Bootstrap 5, Custom CSS
+    \item Features: Multi-session analysis, driver comparisons, responsive design, advanced caching
+    \item Impact: 10,000+ active users, featured in motorsport analytics communities
+    \item Performance: <2s load time, 99.9\% uptime, mobile-optimized interface
+\end{itemize}
+
+\textbf{Multi-Page Analytics Portfolio} \hfill \href{https://your-portfolio-url.streamlit.app}{View Portfolio}
+\begin{itemize}[leftmargin=0.5in, itemsep=0pt]
+    \item Professional portfolio website showcasing data science projects with interactive resume and PDF export
+    \item Technologies: Streamlit, Bootstrap 5, LaTeX, Custom CSS, Responsive Design
+    \item Features: Interactive resume, project galleries, PDF generation, mobile-first design
+    \item Architecture: Multi-page application with optimized performance and modern UI/UX
+\end{itemize}
+
+\textbf{Predictive Maintenance System}
+\begin{itemize}[leftmargin=0.5in, itemsep=0pt]
+    \item Machine learning system for predicting equipment failures using IoT sensor data and LSTM networks
+    \item Technologies: Python, TensorFlow, Time Series Analysis, IoT Integration
+    \item Results: 60\% reduction in unexpected downtime, \$2M+ annual savings
+\end{itemize}
+
+% Education
+\section{Education}
+
+\textbf{Master of Science in Data Science} \hfill \textit{2020}\\
+University of Technology, Boston, MA\\
+\textit{Thesis: "Real-time Sports Analytics: A Case Study in Formula 1 Telemetry Processing"}\\
+\textit{GPA: 3.8/4.0}
+
+\textbf{Bachelor of Science in Computer Science} \hfill \textit{2018}\\
+State University, Boston, MA\\
+\textit{Minor in Statistics and Applied Mathematics}\\
+\textit{Magna Cum Laude, GPA: 3.7/4.0}
+
+% Certifications
+\section{Certifications \& Awards}
+
+\textbf{Professional Certifications:}
+\begin{itemize}[leftmargin=0.5in, itemsep=0pt]
+    \item AWS Certified Solutions Architect - Associate (2023)
+    \item Google Cloud Professional Data Engineer (2022)
+    \item Tableau Desktop Specialist (2021)
+    \item Python Institute PCAP - Certified Associate (2020)
+\end{itemize}
+
+\textbf{Awards \& Recognition:}
+\begin{itemize}[leftmargin=0.5in, itemsep=0pt]
+    \item "Innovation in Sports Analytics" Award - Data Science Conference 2023
+    \item Featured Project - Streamlit Community Gallery (F1 Dashboard)
+    \item Dean's List - University of Technology (2019, 2020)
+\end{itemize}
+
+% Publications & Speaking
+\section{Publications \& Speaking}
+
+\textbf{Publications:}
+\begin{itemize}[leftmargin=0.5in, itemsep=0pt]
+    \item "Real-time Formula 1 Telemetry Analysis: Challenges and Solutions" - \textit{Journal of Sports Analytics}, 2023
+    \item "Interactive Data Visualization in Motorsport Analytics" - \textit{Data Science Today}, 2022
+\end{itemize}
+
+\textbf{Conference Speaking:}
+\begin{itemize}[leftmargin=0.5in, itemsep=0pt]
+    \item "Building Scalable Sports Analytics Dashboards" - PyData Conference 2023
+    \item "From Data to Insights: F1 Telemetry Case Study" - Strata Data Conference 2022
+\end{itemize}
+
+\end{document}
