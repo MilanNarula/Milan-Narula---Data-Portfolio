@@ -1,7 +1,3 @@
-"""
-Main landing page for F1 Analytics Portfolio
-Provides navigation and overview of all portfolio sections
-"""
 import streamlit as st
 from utils.styling import load_all_styles, inject_page_config, create_navbar
 
@@ -148,7 +144,7 @@ st.markdown("""
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-lg-10">
-            <div class="control-panel">
+            <div class="project-card">
                 <h3 class="text-primary mb-4 text-center">
                     🛠️ Technology Stack
                 </h3>
@@ -185,29 +181,29 @@ st.markdown("""
 st.markdown("""
 <div class="container-fluid footer-f1 mt-5">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
+        <div class="row align-items-center">
+            <div class="col-md-4">
                 <h5 class="text-primary">MN Analytics Portfolio</h5>
                 <p class="text-light">
                     Showcasing modern data analytics technologies for advanced insights.
                 </p>
             </div>
-            <div class="d-flex gap-3 justify-content-center flex-wrap">
-            <a href="mailto:your.email@gmail.com" class="btn btn-outline">
-                <i class="bi bi-envelope"></i> Email Me
-            </a>
-            <a href="https://linkedin.com/in/yourprofile" class="btn btn-outline-light">
-                <i class="bi bi-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/yourusername" class="btn btn-outline-light">
-                <i class="bi bi-github"></i> GitHub
-            </a>
+            <div class="col-md-4 d-flex justify-content-center gap-3 flex-wrap">
+                <a href="mailto:narulamilan@gmail.com" class="btn btn-outline-light">
+                    <i class="bi bi-envelope"></i> Email Me
+                </a>
+                <a href="https://linkedin.com/in/milan-narula-aa97957b/" class="btn btn-outline-light">
+                    <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/yourusername" class="btn btn-outline-light">
+                    <i class="bi bi-github"></i> GitHub
+                </a>
             </div>
-            <div class="col-md-6 text-md-end">
-                <p class="text-muted">
-                    Designed and Built by Milan Narula using Streamlit, FastF1 API, Bootstrap and Python. 
+            <div class="col-md-4 text-md-end text-light">
+                <p>
+                    Designed and Built by Milan Narula using Streamlit, FastF1 API, Bootstrap and Python.
                 </p>
-                <p class="text-muted">
+                <p>
                     © 2025 Milan Narula. All rights reserved.
                 </p>
             </div>
