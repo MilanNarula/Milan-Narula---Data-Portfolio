@@ -45,6 +45,11 @@ def display_interactive_resume():
     kpmg_path = Path(__file__).parent.parent / "static" / "images" / "kpmg.D-f0ee9cf2.png"
     with open(kpmg_path, "rb") as logo_file:
         kpmg_base64 = base64.b64encode(logo_file.read()).decode()
+        
+    # Path to the logo image
+    pwc_path = Path(__file__).parent.parent / "static" / "images" / "PwC-Logo.jpg"
+    with open(pwc_path, "rb") as logo_file:
+        pwc_base64 = base64.b64encode(logo_file.read()).decode()    
   
     # Profile header
     st.markdown(f"""
@@ -63,18 +68,24 @@ def display_interactive_resume():
                     <div class="row justify-content-center">
                         <div class="col-auto">
                             <div class="d-flex gap-3 justify-content-center flex-wrap">
-                                <span class="badge bg-primary fs-6 px-3 py-2">
-                                    <i class="bi bi-envelope"></i> narulamilan@gmail.com
-                                </span>
+                                <a href="mailto:your.email@gmail.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                    <span class="badge bg-primary fs-6 px-3 py-2">
+                                    <i class="bi bi-envelope"></i> NarulaMilan@gmail.com
+                                    </span>
+                                </a>
                                 <span class="badge bg-secondary fs-6 px-3 py-2">
                                     <i class="bi bi-phone"></i> +61 0424 043 792
                                 </span>
-                                <span class="badge bg-info fs-6 px-3 py-2">
-                                    <i class="bi bi-linkedin"></i> LinkedIn
-                                </span>
-                                <span class="badge bg-success fs-6 px-3 py-2">
-                                    <i class="bi bi-github"></i> GitHub
-                                </span>
+                                <a href="https://linkedin.com/in/milan-narula-aa97957b/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                    <span class="badge bg-info fs-6 px-3 py-2">
+                                        <i class="bi bi-linkedin"></i> LinkedIn
+                                    </span>
+                                </a>
+                                <a href="https://github.com/milan-narula" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                    <span class="badge bg-success fs-6 px-3 py-2">
+                                        <i class="bi bi-github"></i> GitHub
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -88,11 +99,11 @@ def display_interactive_resume():
     st.markdown("""
     <div class="container mb-5">
         <div class="card" style="border-radius: 10px;">
-            <div class="card-header" style="border-radius: 10px;">
+            <div class="card-header" style="border-radius: 10px 10px 0px 0px;">
                 <h3 class="mb-0"><i class="bi bi-person-circle"></i> Professional Summary</h3>
             </div>
             <div class="card-body">
-                <p class="lead text-light" style="text-align: justify; font-size: 20px"> 
+                <p class="lead text-light" style="text-align: justify; font-size: 18px"> 
                     Senior Analytics Leader with 5+ years delivering measurable impact across commercial, 
                     operational, and real-time analytics. Combines advanced statistical modeling, machine 
                     learning, and AI/GenAI with business pragmatism to convert complex data into strategies that 
@@ -102,18 +113,29 @@ def display_interactive_resume():
                     Experience spans real-time operations (anomaly detection, predictive maintenance), finance and 
                     pricing (forecasting, dynamic pricing), risk and compliance (fraud, model governance), product and engineering (experimentation, telemetry), supply chain and workforce analytics, and ESG reporting. 
                     Strong in data governance, MLOps/ModelOps, and operationalizing analytics for continuous improvement. 
-                    <br><br>Tools: SQL, Python, R, Alteryx, Azure, Tableau, Power BI.
                 </p>
+                <div class="mt-4">
+                    <h5 class="text-secondary mb-1">Technology Stack</h5>
+                    <span class="badge bg-primary me-2 mb-2">Python</span>
+                    <span class="badge bg-secondary me-2 mb-2">R</span>
+                    <span class="badge bg-success me-2 mb-2">GIT</span>
+                    <span class="badge bg-danger me-2 mb-2">Power BI</span>
+                    <span class="badge bg-warning text-dark me-2 mb-2">SQL</span>
+                    <span class="badge bg-info me-2 mb-2">Alteryx</span>
+                    <span class="badge bg-dark me-2 mb-2">Tableau</span>
+                    <span class="badge bg-primary me-2 mb-2">Many More</span>
+                </div>   
             </div>
         </div>
     </div>
     """, unsafe_allow_html=True)
-    
+
+
     # Experience Section
     st.markdown(f"""
     <div class="container mb-5">
-        <div class="card">
-            <div class="card-header">
+        <div class="card" style="border-radius: 10px;">
+            <div class="card-header" style="border-radius: 10px 10px 0px 0px;">
                 <h3 class="mb-0"><i class="bi bi-briefcase"></i> Professional Experience</h3>
             </div>
             <div class="card-body">
@@ -121,7 +143,7 @@ def display_interactive_resume():
                     <div class="col-md-8">
                         <h4 class="text-primary">Manager - Data Analytics</h4>
                         <h5 class="text-secondary mb-3">Reserve Bank of Australia</h5>
-                        <ul class="text-light">
+                        <ul class="text-light" style="font-size: 18px">
                             <li>Developed interactive F1 telemetry analysis dashboard serving 10,000+ users globally</li>
                             <li>Implemented real-time data pipelines processing 1M+ telemetry records daily with 99.9% uptime</li>
                             <li>Created automated reporting systems reducing manual analysis work by 75%</li>
@@ -158,6 +180,7 @@ def display_interactive_resume():
                     </div>
                     <div class="col-md-4">
                         <div class="bg-dark p-3 rounded">
+                            <img src="data:image/png;base64,{logo_base64}" alt="RBA Logo" style="width: 90px; height: auto; margin-bottom: 10px; border-radius: 3px; float: right;">
                             <p class="text-primary mb-2"><strong>2020 - 2022</strong></p>
                             <p class="text-muted mb-2">Boston, MA</p>
                             <div>
@@ -198,8 +221,8 @@ def display_interactive_resume():
                 <hr class="my-4" style="border-color: var(--f1-primary); border-width: 2px;">
                 <div class="row">
                     <div class="col-md-8">
-                        <h4 class="text-primary">Senior Consultant - Data Analytics</h4>
-                        <h5 class="text-secondary mb-3">KPMG</h5>
+                        <h4 class="text-primary">Senior Associate - Mergers & Acquisitions Analytics</h4>
+                        <h5 class="text-secondary mb-3">PwC</h5>
                         <ul class="text-light">
                             <li>Built predictive models for customer behavior analysis using machine learning</li>
                             <li>Designed and maintained ETL pipelines for multi-source data integration</li>
@@ -209,6 +232,7 @@ def display_interactive_resume():
                     </div>
                     <div class="col-md-4">
                         <div class="bg-dark p-3 rounded">
+                            <img src="data:image/jpeg;base64,{pwc_base64}" alt="RBA Logo" style="width: 90px; height: auto; margin-bottom: 10px; border-radius: 3px; float: right;">
                             <p class="text-primary mb-2"><strong>2020 - 2022</strong></p>
                             <p class="text-muted mb-2">Boston, MA</p>
                             <div>
@@ -223,7 +247,7 @@ def display_interactive_resume():
                 <hr class="my-4" style="border-color: var(--f1-primary); border-width: 2px;">
                 <div class="row">
                     <div class="col-md-8">
-                        <h4 class="text-primary">Senior Consultant - Data Analytics</h4>
+                        <h4 class="text-primary">Consultant - Data Analytics</h4>
                         <h5 class="text-secondary mb-3">KPMG</h5>
                         <ul class="text-light">
                             <li>Built predictive models for customer behavior analysis using machine learning</li>
@@ -234,7 +258,34 @@ def display_interactive_resume():
                     </div>
                     <div class="col-md-4">
                         <div class="bg-dark p-3 rounded">
-                            <p class="text-primary mb-2"><strong>2020 - 2022</strong></p>
+                            <img src="data:image/png;base64,{kpmg_base64}" alt="RBA Logo" style="width: 90px; height: auto; margin-bottom: 10px; border-radius: 3px; float: right;">
+                            <p class="text-primary mb-2"><strong>2019 - 2021</strong></p>
+                            <p class="text-muted mb-2">Boston, MA</p>
+                            <div>
+                                <span class="badge bg-danger me-1 mb-1">R</span>
+                                <span class="badge bg-warning text-dark me-1 mb-1">Tableau</span>
+                                <span class="badge bg-info me-1 mb-1">SQL</span>
+                                <span class="badge bg-success me-1 mb-1">Excel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4" style="border-color: var(--f1-primary); border-width: 2px;">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4 class="text-primary">Intern</h4>
+                        <h5 class="text-secondary mb-1">Various</h5>
+                        <ul class="text-light">
+                            <li>KPMG</li>
+                            <li>HSBC</li>
+                            <li>Accenture</li>
+                            <li>MBPD & Thales</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bg-dark p-3 rounded">
+                            <img src="data:image/png;base64,{kpmg_base64}" alt="RBA Logo" style="width: 90px; height: auto; margin-bottom: 10px; border-radius: 3px; float: right;">
+                            <p class="text-primary mb-2"><strong>2019 - 2021</strong></p>
                             <p class="text-muted mb-2">Boston, MA</p>
                             <div>
                                 <span class="badge bg-danger me-1 mb-1">R</span>
@@ -254,8 +305,8 @@ def display_interactive_resume():
     skills_left = {
         "Python": 95,
         "SQL": 90,
-        "R": 80,
-        "JavaScript": 75
+        "R": 90,
+        "Power BI": 100
     }
 
     skills_right = {
@@ -267,8 +318,8 @@ def display_interactive_resume():
 
     # Build the HTML for skills in one string
     skills_html = """<div class="container mb-5">
-        <div class="card">
-            <div class="card-header">
+        <div class="card" style="border-radius: 10px;">
+            <div class="card-header" style="border-radius: 10px 10px 0px 0px;">
                 <h3 class="mb-0"><i class="bi bi-tools"></i> Technical Skills</h3>
             </div>
             <div class="card-body">
@@ -281,7 +332,8 @@ def display_interactive_resume():
         skills_html += f"""<strong>{skill}</strong>
         <div class="progress mb-3">
             <div class="progress-bar bg-success" role="progressbar" style="width: {level}%;"
-                aria-valuenow="{level}" aria-valuemin="0" aria-valuemax="100">{level}%
+                aria-valuenow="{level}" aria-valuemin="0" aria-valuemax="100">
+                <span style="font-weight: bold;">{level}%</span>
             </div>
         </div>
         """
@@ -295,7 +347,8 @@ def display_interactive_resume():
         skills_html += f"""<strong>{skill}</strong>
         <div class="progress mb-3">
             <div class="progress-bar bg-info" role="progressbar" style="width: {level}%;"
-                aria-valuenow="{level}" aria-valuemin="0" aria-valuemax="100">{level}%
+                aria-valuenow="{level}" aria-valuemin="0" aria-valuemax="100">
+                <span style="font-weight: bold;">{level}%</span>
             </div>
         </div>
         """
@@ -323,8 +376,8 @@ def display_interactive_resume():
     # Projects Section
     st.markdown("""
     <div class="container mb-5">
-        <div class="card">
-            <div class="card-header">
+       <div class="card" style="border-radius: 10px;">
+            <div class="card-header" style="border-radius: 10px 10px 0px 0px;">
                 <h3 class="mb-0"><i class="bi bi-code-square"></i> Featured Projects</h3>
             </div>
             <div class="card-body">
@@ -349,7 +402,7 @@ def display_interactive_resume():
                                 <strong>Impact:</strong> 10,000+ users, featured in motorsport analytics communities
                             </p>
                         </div>
-                    </div>
+                    </div>de
                 </div>
                 <div class="project-card">
                     <div class="d-flex align-items-start">
@@ -380,43 +433,51 @@ def display_interactive_resume():
     
     # Education Section
     st.markdown("""
-    <div class="container mb-5">
-        <div class="card">
-            <div class="card-header">
+    <div class="container mb-4">
+       <div class="card" style="border-radius: 10px;">
+            <div class="card-header" style="border-radius: 10px 10px 0px 0px;">
                 <h3 class="mb-0"><i class="bi bi-mortarboard"></i> Education & Certifications</h3>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <h5 class="text-primary">Education</h5>
+                        <h4 class="text-primary">Education</h4>
                         <div class="mb-3">
-                            <h6 class="text-secondary">Master of Science in Data Science</h6>
-                            <p class="text-light mb-1">University of Technology</p>
-                            <p class="text-muted">Boston, MA • 2020</p>
+                            <h6 class="text-secondary">Bachelor of Economics</h6>
+                            <p class="text-light mb-1">University of Sydney</p>
+                            <p class="text-muted">Sydney, AU • 2019</p>
                         </div>
                         <div class="mb-3">
-                            <h6 class="text-secondary">Bachelor of Science in Computer Science</h6>
-                            <p class="text-light mb-1">State University</p>
-                            <p class="text-muted">Boston, MA • 2018</p>
+                            <h6 class="text-secondary">Bachelor of Computer Science</h6>
+                            <p class="text-light mb-1">University of Sydney</p>
+                            <p class="text-muted">Sydney, AU • 2017</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <h5 class="text-primary">Certifications</h5>
-                        <div class="mb-2">
-                            <span class="badge bg-warning text-dark me-2">AWS</span>
-                            <span class="text-light">Solutions Architect (2023)</span>
+                            <div class="mb-2">
+                            <span class="text-light me-2">IBM Data Engineer (2025)</span>
+                            <span class="badge bg-warning text-dark me-2">Coursera</span>
                         </div>
                         <div class="mb-2">
-                            <span class="badge bg-info me-2">GCP</span>
-                            <span class="text-light">Professional Data Engineer (2022)</span>
+                            <span class="text-light me-2">IBM Data Analyst (2025)</span>
+                            <span class="badge bg-warning text-dark me-2">Coursera</span>
                         </div>
                         <div class="mb-2">
-                            <span class="badge bg-success me-2">Tableau</span>
-                            <span class="text-light">Desktop Specialist (2021)</span>
+                            <span class="text-light me-2">Certified Data Management Practitioner (2025)</span>
+                            <span class="badge bg-info me-2">DAMA</span>
                         </div>
                         <div class="mb-2">
-                            <span class="badge bg-primary me-2">Python</span>
-                            <span class="text-light">Data Science Certification (2020)</span>
+                            <span class="text-light me-2">Automotive Engineering Certification (2025)</span>
+                            <span class="badge bg-warning text-dark me-2">Coursera</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="text-light me-2">Institute of Analytical Professionals (2025)</span>
+                            <span class="badge bg-primary me-2">IAPA</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="text-light me-2">Applied Data Science for Innovation (2024)</span>
+                            <span class="badge bg-primary me-2">UTS</span>
                         </div>
                     </div>
                 </div>
@@ -541,7 +602,7 @@ else:
 
 # Footer with additional links
 st.markdown("""
-<div class="container mt-5">
+<div class="container mt-4">
     <div class="text-center">
         <div class="control-panel">
             <h4 class="text-primary mb-3">🔗 Connect With Me</h4>

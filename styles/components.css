@@ -3,6 +3,19 @@ Custom component styles for F1 Analytics Portfolio
 Includes cards, animations, and interactive elements
 */
 
+/* Glolbal option to remove anchor links */
+.metric-card .anchor-link,
+.metric-card a[href^="#"],
+.metric-card .stMarkdown a {
+    display: none !important;
+}
+
+.project-card .anchor-link,
+.project-card a[href^="#"],
+.project-card .stMarkdown a {
+    display: none !important;
+}
+
 /* Custom F1 Components */
 .f1-hero {
     background: linear-gradient(135deg, var(--f1-dark) 0%, var(--f1-light) 50%, var(--f1-dark) 100%);
@@ -136,7 +149,7 @@ Includes cards, animations, and interactive elements
     padding: 2rem;
     text-align: center;
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
     background-clip: padding-box;
 }
 
@@ -164,6 +177,7 @@ Includes cards, animations, and interactive elements
     -webkit-background-clip: initial;
     -webkit-text-fill-color: white;
     background-clip: initial;
+    transition: all 0.1s ease;
 }
 
 .metric-number {
@@ -174,6 +188,7 @@ Includes cards, animations, and interactive elements
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 0.5rem;
+    transition: all 0.1s ease;
 }
 
 /* Skill Progress Bars */

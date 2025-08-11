@@ -117,3 +117,35 @@ def create_navbar(current_page="Home"):
     """, unsafe_allow_html=True)
 
 
+st.markdown("""
+<style>
+    /* Set sidebar width and enable transitions */
+    [data-testid="stSidebar"] {
+        min-width: 400px;
+        max-width: 400px;
+    }
+    
+    [data-testid="stSidebar"][aria-expanded="true"] {
+        min-width: 400px;
+        max-width: 400px;
+        margin-left: 0;
+        transition: margin-left 0.3s ease-out;
+    }
+    
+    [data-testid="stSidebar"][aria-expanded="false"] {
+        min-width: 400px;
+        max-width: 400px;
+        margin-left: -400px;
+        transition: margin-left 0.5s ease-in;
+    }
+    
+    /* Ensure sidebar content animates smoothly */
+    [data-testid="stSidebar"] .css-1d391kg {
+        transition: opacity 0.3s ease;
+    }
+    
+    [data-testid="stSidebar"][aria-expanded="false"] .css-1d391kg {
+        opacity: 0;
+    }
+</style>
+""", unsafe_allow_html=True)

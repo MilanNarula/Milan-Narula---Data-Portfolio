@@ -42,7 +42,34 @@ st.markdown("""
     </h2>
     <div class="row g-4">
         <div class="col-lg-6">
-            <div class="project-card h-100">
+           <div class="project-card h-100">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="fs-1 me-3">📄</span>
+                    <div> 
+                        <h4 class="text-primary mb-1">Professional Resume</h4>
+                        <p class="text-muted mb-0">Interactive CV and experience</p>
+                    </div>
+                </div>
+                <p class="text-light mb-4">
+                    Comprehensive professional profile with interactive elements, 
+                    downloadable PDF, and LaTeX source. Showcases technical skills, 
+                    experience, and project portfolio.
+                </p>
+                <div class="mb-3">
+                    <span class="badge bg-success me-2">Interactive</span>
+                    <span class="badge bg-danger me-2">PDF Export</span>
+                    <span class="badge bg-warning text-dark me-2">LaTeX</span>
+                    <span class="badge bg-info">Bootstrap</span>
+                </div>
+                <div class="d-grid">
+                    <a href="pages/2_📄_Resume" class="btn btn-f1-primary">
+                        View Resume →
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+             <div class="project-card h-100">
                 <div class="d-flex align-items-center mb-3">
                     <span class="fs-1 me-3">🏎️</span>
                     <div>
@@ -68,34 +95,6 @@ st.markdown("""
                 </div>
             </div>
         </div>
-        
-<div class="col-lg-6">
-    <div class="project-card h-100">
-        <div class="d-flex align-items-center mb-3">
-            <span class="fs-1 me-3">📄</span>
-            <div> 
-                <h4 class="text-primary mb-1">Professional Resume</h4>
-                <p class="text-muted mb-0">Interactive CV and experience</p>
-            </div>
-        </div>
-        <p class="text-light mb-4">
-            Comprehensive professional profile with interactive elements, 
-            downloadable PDF, and LaTeX source. Showcases technical skills, 
-            experience, and project portfolio.
-        </p>
-        <div class="mb-3">
-            <span class="badge bg-success me-2">Interactive</span>
-            <span class="badge bg-danger me-2">PDF Export</span>
-            <span class="badge bg-warning text-dark me-2">LaTeX</span>
-            <span class="badge bg-info">Bootstrap</span>
-        </div>
-        <div class="d-grid">
-            <a href="pages/2_📄_Resume" class="btn btn-f1-primary">
-                View Resume →
-            </a>
-        </div>
-    </div>
-</div>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -111,28 +110,28 @@ st.markdown("""
             <div class="metric-card">
                 <div class="metric-number">15+</div>
                 <h5 class="text-light">Projects</h5>
-                <p class="text-muted mb-0">Data science & analytics</p>
+                <p class="text-light mb-0">Data science & analytics</p>
             </div>
         </div>
         <div class="col-md-3">
             <div class="metric-card">
                 <div class="metric-number">8</div>
                 <h5 class="text-light">Technologies</h5>
-                <p class="text-muted mb-0">Programming languages</p>
+                <p class="text-light mb-0">Programming languages</p>
             </div>
         </div>
         <div class="col-md-3">
             <div class="metric-card">
                 <div class="metric-number">25+</div>
                 <h5 class="text-light">Data Sources</h5>
-                <p class="text-muted mb-0">APIs and databases</p>
+                <p class="text-light mb-0">APIs and databases</p>
             </div>
         </div>
         <div class="col-md-3">
             <div class="metric-card">
                 <div class="metric-number">200+</div>
                 <h5 class="text-light">Visualizations</h5>
-                <p class="text-muted mb-0">Charts and dashboards</p>
+                <p class="text-light mb-0">Charts and dashboards</p>
             </div>
         </div>
     </div>
@@ -201,7 +200,7 @@ st.markdown("""
             </div>
             <div class="col-md-4 text-md-end text-light">
                 <p>
-                    Designed and Built by Milan Narula using Streamlit, FastF1 API, Bootstrap and Python.
+                    Designed and Built by Milan Narula.
                 </p>
                 <p>
                     © 2025 Milan Narula. All rights reserved.

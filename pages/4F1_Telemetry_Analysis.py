@@ -34,7 +34,7 @@ st.title("🏎️ F1 Telemetry Analysis Dashboard")
 with st.sidebar:
     st.markdown("""
     <div class="control-panel">
-        <h3 class="text-primary text-center mb-4">⚙️ Analysis Configuration</h3>
+        <h3 class="text-primary text-left mb-4"> Analysis Configuration</h3>
     </div>
     """, unsafe_allow_html=True)
     

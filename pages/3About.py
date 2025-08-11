@@ -153,7 +153,7 @@ with col2:
 
 # Development Journey
 st.markdown("""
-<div class="container mt-5">
+<div class="container-fluid mt-5">
     <div class="project-card">
         <h3 class="text-primary text-center mb-4">🛣️ Development Journey</h3>
         <div class="row">

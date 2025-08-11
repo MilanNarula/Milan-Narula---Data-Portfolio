@@ -101,6 +101,7 @@ Handles Plotly integration and data visualization styling
     border-radius: 15px;
     padding: 1.5rem;
     border-left: 4px solid var(--f1-primary);
+    border-right: 4px solid var(--f1-primary);
     margin: 1rem 0;
 }
 
