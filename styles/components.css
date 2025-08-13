@@ -16,6 +16,8 @@ Includes cards, animations, and interactive elements
     display: none !important;
 }
 
+
+
 /* Custom F1 Components */
 .f1-hero {
     background: linear-gradient(135deg, var(--f1-dark) 0%, var(--f1-light) 50%, var(--f1-dark) 100%);
