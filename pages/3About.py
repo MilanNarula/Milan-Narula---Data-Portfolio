@@ -4,6 +4,13 @@ from utils.styling import load_all_styles, inject_page_config, create_navbar
 # Configure page
 inject_page_config()
 load_all_styles()
+st.markdown("""
+        <style>
+        [data-testid="stHeaderActionElements"] {
+            display: none;
+        }
+        </style>
+    """, unsafe_allow_html=True)
 
 # Create navigation
 create_navbar("About")

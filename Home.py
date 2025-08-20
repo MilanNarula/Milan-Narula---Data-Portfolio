@@ -4,6 +4,13 @@ from utils.styling import load_all_styles, inject_page_config, create_navbar
 # Configure page
 inject_page_config()
 load_all_styles()
+st.markdown("""
+        <style>
+        [data-testid="stHeaderActionElements"] {
+            display: none;
+        }
+        </style>
+    """, unsafe_allow_html=True)
 
 # Create navigation
 create_navbar("Home")
@@ -16,20 +23,13 @@ st.markdown("""
             Welcome to Milan Narula's Data Analytics Portfolio
         </h1>
         <p class="lead fs-4 mb-4">
-            Your gateway to advanced data analytics and visualization
+            Your gateway into my analytical intersts and my passion for Formula!
         </p>
         <p class="fs-5 text-muted mb-5">
-            Explore interactive projects, real-time data analysis, and modern technologies
-            that drive insights in the world of Formula 1 racing and beyond.
+            Explore my interactive projects, take a look at my resume if you're a recruiter
+            and read about my journey in the world of data analytics. Use the quick links below
+            or use the navigation tab to the left to explore the site. 
         </p>
-        <div class="d-grid gap-3 d-md-flex justify-content-md-center">
-            <a href="pages/1_🏎️_F1_Telemetry" class="btn btn-f1-primary btn-lg px-4">
-                🚀 Launch F1 Analysis
-            </a>
-            <a href="Resume" class="btn btn-f1-primary btn-lg px-4">
-                📄 View Resume
-            </a>
-        </div>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -38,7 +38,7 @@ st.markdown("""
 st.markdown("""
 <div class="container mt-3">
     <h2 class="text-center mb-3" style="color: var(--f1-primary);">
-        🎯 Quick Navigation
+        Quick Navigation
     </h2>
     <div class="row g-4">
         <div class="col-lg-6">
@@ -62,7 +62,7 @@ st.markdown("""
                     <span class="badge bg-info">Bootstrap</span>
                 </div>
                 <div class="d-grid">
-                    <a href="pages/2_📄_Resume" class="btn btn-f1-primary">
+                    <a href="/Resume" class="btn btn-f1-primary">
                         View Resume →
                     </a>
                 </div>
@@ -89,7 +89,7 @@ st.markdown("""
                     <span class="badge bg-info">Plotly</span>
                 </div>
                 <div class="d-grid">
-                    <a href="pages/1_🏎️_F1_Telemetry" class="btn btn-f1-primary">
+                    <a href="/F1_Telemetry_Analysis" class="btn btn-f1-primary">
                         Launch Analysis →
                     </a>
                 </div>
@@ -102,8 +102,8 @@ st.markdown("""
 # Portfolio Metrics
 st.markdown("""
 <div class="container mt-5">
-    <h2 class="text-center mb-5" style="color: var(--f1-secondary);">
-        📊 Portfolio Metrics
+    <h2 class="text-center mb-5" style="color: var(--f1-primary);">
+        Portfolio Metrics
     </h2>
     <div class="row g-4 text-center">
         <div class="col-md-3">
@@ -115,23 +115,23 @@ st.markdown("""
         </div>
         <div class="col-md-3">
             <div class="metric-card">
-                <div class="metric-number">8</div>
+                <div class="metric-number">10+</div>
                 <h5 class="text-light">Technologies</h5>
                 <p class="text-light mb-0">Programming languages</p>
             </div>
         </div>
         <div class="col-md-3">
             <div class="metric-card">
-                <div class="metric-number">25+</div>
+                <div class="metric-number">100+</div>
                 <h5 class="text-light">Data Sources</h5>
                 <p class="text-light mb-0">APIs and databases</p>
             </div>
         </div>
         <div class="col-md-3">
             <div class="metric-card">
-                <div class="metric-number">200+</div>
-                <h5 class="text-light">Visualizations</h5>
-                <p class="text-light mb-0">Charts and dashboards</p>
+                <div class="metric-number">5+</div>
+                <h5 class="text-light">Years of Experience</h5>
+                <p class="text-light mb-0">Data Analytics & Science</p>
             </div>
         </div>
     </div>
@@ -145,7 +145,7 @@ st.markdown("""
         <div class="col-lg-10">
             <div class="project-card">
                 <h3 class="text-primary mb-4 text-center">
-                    🛠️ Technology Stack
+                    Technology Stack
                 </h3>
                 <div class="row">
                     <div class="col-md-4 mb-3 text-center">
@@ -163,6 +163,9 @@ st.markdown("""
                         <div class="mb-2"><span class="badge bg-danger">Plotly</span></div>
                         <div class="mb-2"><span class="badge bg-primary">Bootstrap 5</span></div>
                         <div class="mb-2"><span class="badge bg-secondary">CSS3</span></div>
+                        <div class="mb-2"><span class="badge bg-secondary">R Shiny</span></div>
+                        <div class="mb-2"><span class="badge bg-secondary">Tableau</span></div>
+                        <div class="mb-2"><span class="badge bg-secondary">Power BI</span></div>
                     </div>
                     <div class="col-md-4 mb-3 text-center">
                         <h5 class="text-secondary mb-3">Deployment & Tools</h5>
@@ -170,6 +173,9 @@ st.markdown("""
                         <div class="mb-2"><span class="badge bg-info">Git</span></div>
                         <div class="mb-2"><span class="badge bg-warning text-dark">LaTeX</span></div>
                         <div class="mb-2"><span class="badge bg-primary">Docker</span></div>
+                        <div class="mb-2"><span class="badge bg-primary">Posit</span></div>
+                        <div class="mb-2"><span class="badge bg-primary">Cloudera</span></div>
+                        <div class="mb-2"><span class="badge bg-primary">Azure DevOps</span></div>
                     </div>
                 </div>
             </div>
