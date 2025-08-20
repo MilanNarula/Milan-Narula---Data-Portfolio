@@ -13,6 +13,13 @@ from pathlib import Path
 # Configure page
 inject_page_config()
 load_all_styles()
+st.markdown("""
+        <style>
+        [data-testid="stHeaderActionElements"] {
+            display: none;
+        }
+        </style>
+    """, unsafe_allow_html=True)
 
 # Create navigation
 create_navbar("Resume")
@@ -24,7 +31,7 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     resume_format = st.radio(
         "Choose Resume Format:",
-        ["📱 Interactive View", "📄 PDF View", "⚡ LaTeX Source"],
+        ["Interactive View", "PDF View"],
         horizontal=True
     )
 
@@ -144,7 +151,7 @@ def display_interactive_resume():
                         <h4 class="text-primary">Manager - Data Analytics</h4>
                         <h5 class="text-secondary mb-3">Reserve Bank of Australia</h5>
                         <ul class="text-light" style="font-size: 18px">
-                            <li>Developed interactive F1 telemetry analysis dashboard serving 10,000+ users globally</li>
+                            <li>Led multi-departmental data initiatives across banking, financial markets, economics and enterprise divisions, analyzing complex datasets using R, Python and Tableau</li>
                             <li>Implemented real-time data pipelines processing 1M+ telemetry records daily with 99.9% uptime</li>
                             <li>Created automated reporting systems reducing manual analysis work by 75%</li>
                             <li>Led cross-functional team of 5 data professionals in delivering analytics solutions</li>
@@ -493,7 +500,7 @@ def display_pdf_resume():
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="text-center mb-4">
-                    <h3 class="text-primary">📄 PDF Resume</h3>
+                    <h3 class="text-primary">PDF Resume</h3>
                     <p class="text-light">Professional resume in PDF format</p>
                 </div>
             </div>
@@ -509,7 +516,7 @@ def display_pdf_resume():
             # Create download button
             col1, col2, col3 = st.columns([1, 2, 1])
             with col2:
-                create_pdf_download_button(pdf_path, "Your_Name_Resume.pdf")
+                create_pdf_download_button(pdf_path, "Milan Narula.pdf")
     else:
         st.markdown("""
         <div class="alert alert-warning text-center">
@@ -593,9 +600,9 @@ def display_latex_source():
                 st.rerun()
 
 # Display selected format
-if resume_format == "📱 Interactive View":
+if resume_format == "Interactive View":
     display_interactive_resume()
-elif resume_format == "📄 PDF View":
+elif resume_format == "PDF View":
     display_pdf_resume()
 else:
     display_latex_source()
