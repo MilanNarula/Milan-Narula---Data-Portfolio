@@ -3,6 +3,21 @@ Custom component styles for F1 Analytics Portfolio
 Includes cards, animations, and interactive elements
 */
 
+/* Glolbal option to remove anchor links */
+.metric-card .anchor-link,
+.metric-card a[href^="#"],
+.metric-card .stMarkdown a {
+    display: none !important;
+}
+
+.project-card .anchor-link,
+.project-card a[href^="#"],
+.project-card .stMarkdown a {
+    display: none !important;
+}
+
+
+
 /* Custom F1 Components */
 .f1-hero {
     background: linear-gradient(135deg, var(--f1-dark) 0%, var(--f1-light) 50%, var(--f1-dark) 100%);
@@ -39,6 +54,7 @@ Includes cards, animations, and interactive elements
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
     overflow: hidden;
+    height: 100%;
 }
 
 .project-card::before {
@@ -46,6 +62,7 @@ Includes cards, animations, and interactive elements
     position: absolute;
     top: 0;
     left: 0;
+    right: -1;
     width: 4px;
     height: 100%;
     background: linear-gradient(to bottom, var(--f1-primary), var(--f1-secondary));
@@ -62,6 +79,70 @@ Includes cards, animations, and interactive elements
     border-color: var(--f1-primary);
 }
 
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--f1-primary), var(--f1-secondary));
+  transition: width 0.3s ease;
+}
+
+.project-card:hover::after {
+  width: 8px;
+}
+
+.project-card-about {
+    background: linear-gradient(135deg, var(--f1-light) 0%, #2d3142 100%);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1rem 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+
+.project-card-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -1;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--f1-primary), var(--f1-secondary));
+    transition: width 0.3s ease;
+}
+
+.project-card-about:hover::before {
+    width: 8px;
+}
+
+.project-card-about:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(255, 107, 53, 0.3);
+    border-color: var(--f1-primary);
+}
+
+.project-card-about::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--f1-primary), var(--f1-secondary));
+  transition: width 0.3s ease;
+}
+
+.project-card-about:hover::after {
+  width: 8px;
+}
+
 /* Metric Cards */
 .metric-card {
     background: var(--f1-light);
@@ -70,7 +151,7 @@ Includes cards, animations, and interactive elements
     padding: 2rem;
     text-align: center;
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
     background-clip: padding-box;
 }
 
@@ -93,6 +174,14 @@ Includes cards, animations, and interactive elements
     color:  white;
 }
 
+.metric-card:hover .metric-number {
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: white;
+    background-clip: initial;
+    transition: all 0.1s ease;
+}
+
 .metric-number {
     font-size: 3rem;
     font-weight: 800;
@@ -101,6 +190,7 @@ Includes cards, animations, and interactive elements
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 0.5rem;
+    transition: all 0.1s ease;
 }
 
 /* Skill Progress Bars */
@@ -149,16 +239,27 @@ Includes cards, animations, and interactive elements
 }
 
 /* Navigation Components */
-.navbar-f1 {
+/*.navbar-f1 { This is the old one with an infill
     position: sticky;
     top: 0;
-    z-index: 1000; /* keep it above other elements */
-    background: linear-gradient(90deg, var(--f1-primary) 0%, var(--f1-secondary) 50%, var(--f1-primary) 100%);
+    z-index: 1000;*/ /* keep it above other elements */
+   /* background: linear-gradient(90deg, var(--f1-primary) 0%, var(--f1-secondary) 50%, var(--f1-primary) 100%);
     box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-}
+}*/
 
+.navbar-f1 {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent; /* Removes the fill */
+    border: 2px solid var(--f1-primary); /* Creates the outline */
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    color: var(--f1-primary); /* Sets text color */
+}
 
 /* Remove Streamlit default top padding */
 .block-container {
@@ -182,7 +283,7 @@ Includes cards, animations, and interactive elements
 
 .navbar-f1 .nav-link:hover,
 .navbar-f1 .nav-link.active {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--f1-primary);
     transform: translateY(-2px);
 }
 
@@ -190,6 +291,7 @@ Includes cards, animations, and interactive elements
 .footer-f1 {
     background: var(--f1-light);
     border-top: 2px solid var(--f1-primary);
+    border-bottom: 2px solid var(--f1-primary);
     margin-top: 4rem;
     padding: 2rem 0;
     border-radius: 10px;
@@ -244,6 +346,32 @@ Includes cards, animations, and interactive elements
     box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
     background: linear-gradient(45deg, var(--f1-secondary), var(--f1-accent));
     color: white;
+}
+
+.btn-outline-light {
+    background: transparent;
+    border: 1px solid var(--f1-primary);
+    color: var(--f1-primary);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: var(--f1-primary);
+    color: white;
+}
+
+
+/* Misc CSS Settings */
+.equal-height-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+    align-items: stretch; /* This is the key property */
+}
+
+/* Custom class to enable equal height for columns */
+.equal-height-row {
+  display: flex;
+  align-items: stretch;
 }
 
 /* Responsive Adjustments */

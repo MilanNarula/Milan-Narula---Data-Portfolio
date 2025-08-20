@@ -1,7 +1,3 @@
-"""
-Main landing page for F1 Analytics Portfolio
-Provides navigation and overview of all portfolio sections
-"""
 import streamlit as st
 from utils.styling import load_all_styles, inject_page_config, create_navbar
 
@@ -46,7 +42,34 @@ st.markdown("""
     </h2>
     <div class="row g-4">
         <div class="col-lg-6">
-            <div class="project-card h-100">
+           <div class="project-card h-100">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="fs-1 me-3">📄</span>
+                    <div> 
+                        <h4 class="text-primary mb-1">Professional Resume</h4>
+                        <p class="text-muted mb-0">Interactive CV and experience</p>
+                    </div>
+                </div>
+                <p class="text-light mb-4">
+                    Comprehensive professional profile with interactive elements, 
+                    downloadable PDF, and LaTeX source. Showcases technical skills, 
+                    experience, and project portfolio.
+                </p>
+                <div class="mb-3">
+                    <span class="badge bg-success me-2">Interactive</span>
+                    <span class="badge bg-danger me-2">PDF Export</span>
+                    <span class="badge bg-warning text-dark me-2">LaTeX</span>
+                    <span class="badge bg-info">Bootstrap</span>
+                </div>
+                <div class="d-grid">
+                    <a href="pages/2_📄_Resume" class="btn btn-f1-primary">
+                        View Resume →
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+             <div class="project-card h-100">
                 <div class="d-flex align-items-center mb-3">
                     <span class="fs-1 me-3">🏎️</span>
                     <div>
@@ -72,34 +95,6 @@ st.markdown("""
                 </div>
             </div>
         </div>
-        
-<div class="col-lg-6">
-    <div class="project-card h-100">
-        <div class="d-flex align-items-center mb-3">
-            <span class="fs-1 me-3">📄</span>
-            <div> 
-                <h4 class="text-primary mb-1">Professional Resume</h4>
-                <p class="text-muted mb-0">Interactive CV and experience</p>
-            </div>
-        </div>
-        <p class="text-light mb-4">
-            Comprehensive professional profile with interactive elements, 
-            downloadable PDF, and LaTeX source. Showcases technical skills, 
-            experience, and project portfolio.
-        </p>
-        <div class="mb-3">
-            <span class="badge bg-success me-2">Interactive</span>
-            <span class="badge bg-danger me-2">PDF Export</span>
-            <span class="badge bg-warning text-dark me-2">LaTeX</span>
-            <span class="badge bg-info">Bootstrap</span>
-        </div>
-        <div class="d-grid">
-            <a href="pages/2_📄_Resume" class="btn btn-f1-primary">
-                View Resume →
-            </a>
-        </div>
-    </div>
-</div>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -115,28 +110,28 @@ st.markdown("""
             <div class="metric-card">
                 <div class="metric-number">15+</div>
                 <h5 class="text-light">Projects</h5>
-                <p class="text-muted mb-0">Data science & analytics</p>
+                <p class="text-light mb-0">Data science & analytics</p>
             </div>
         </div>
         <div class="col-md-3">
             <div class="metric-card">
                 <div class="metric-number">8</div>
                 <h5 class="text-light">Technologies</h5>
-                <p class="text-muted mb-0">Programming languages</p>
+                <p class="text-light mb-0">Programming languages</p>
             </div>
         </div>
         <div class="col-md-3">
             <div class="metric-card">
                 <div class="metric-number">25+</div>
                 <h5 class="text-light">Data Sources</h5>
-                <p class="text-muted mb-0">APIs and databases</p>
+                <p class="text-light mb-0">APIs and databases</p>
             </div>
         </div>
         <div class="col-md-3">
             <div class="metric-card">
                 <div class="metric-number">200+</div>
                 <h5 class="text-light">Visualizations</h5>
-                <p class="text-muted mb-0">Charts and dashboards</p>
+                <p class="text-light mb-0">Charts and dashboards</p>
             </div>
         </div>
     </div>
@@ -148,7 +143,7 @@ st.markdown("""
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-lg-10">
-            <div class="control-panel">
+            <div class="project-card">
                 <h3 class="text-primary mb-4 text-center">
                     🛠️ Technology Stack
                 </h3>
@@ -159,6 +154,8 @@ st.markdown("""
                         <div class="mb-2"><span class="badge bg-secondary">Pandas</span></div>
                         <div class="mb-2"><span class="badge bg-success">FastF1 API</span></div>
                         <div class="mb-2"><span class="badge bg-info">NumPy</span></div>
+                        <div class="mb-2"><span class="badge bg-info">R</span></div>
+                        <div class="mb-2"><span class="badge bg-info">SQL</span></div>
                     </div>
                     <div class="col-md-4 mb-3 text-center">
                         <h5 class="text-secondary mb-3">Frontend & Visualization</h5>
@@ -185,29 +182,29 @@ st.markdown("""
 st.markdown("""
 <div class="container-fluid footer-f1 mt-5">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
+        <div class="row align-items-center">
+            <div class="col-md-4">
                 <h5 class="text-primary">MN Analytics Portfolio</h5>
                 <p class="text-light">
                     Showcasing modern data analytics technologies for advanced insights.
                 </p>
             </div>
-            <div class="d-flex gap-3 justify-content-center flex-wrap">
-            <a href="mailto:your.email@gmail.com" class="btn btn-outline">
-                <i class="bi bi-envelope"></i> Email Me
-            </a>
-            <a href="https://linkedin.com/in/yourprofile" class="btn btn-outline-light">
-                <i class="bi bi-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/yourusername" class="btn btn-outline-light">
-                <i class="bi bi-github"></i> GitHub
-            </a>
+            <div class="col-md-4 d-flex justify-content-center gap-3 flex-wrap">
+                <a href="mailto:narulamilan@gmail.com" class="btn btn-outline-light">
+                    <i class="bi bi-envelope"></i> Email Me
+                </a>
+                <a href="https://linkedin.com/in/milan-narula-aa97957b/" class="btn btn-outline-light">
+                    <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/yourusername" class="btn btn-outline-light">
+                    <i class="bi bi-github"></i> GitHub
+                </a>
             </div>
-            <div class="col-md-6 text-md-end">
-                <p class="text-muted">
-                    Designed and Built by Milan Narula using Streamlit, FastF1 API, Bootstrap and Python. 
+            <div class="col-md-4 text-md-end text-light">
+                <p>
+                    Designed and Built by Milan Narula.
                 </p>
-                <p class="text-muted">
+                <p>
                     © 2025 Milan Narula. All rights reserved.
                 </p>
             </div>
