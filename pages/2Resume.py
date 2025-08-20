@@ -103,7 +103,7 @@ def display_interactive_resume():
                 <h3 class="mb-0"><i class="bi bi-person-circle"></i> Professional Summary</h3>
             </div>
             <div class="card-body">
-                <p class="lead text-light" style="text-align: justify; font-size: 18px"> 
+                <p class="text-light" style="text-align: justify; font-size: 18px"> 
                     Senior Analytics Leader with 5+ years delivering measurable impact across commercial, 
                     operational, and real-time analytics. Combines advanced statistical modeling, machine 
                     learning, and AI/GenAI with business pragmatism to convert complex data into strategies that 
@@ -134,7 +134,7 @@ def display_interactive_resume():
     # Experience Section
     st.markdown(f"""
     <div class="container mb-5">
-        <div class="card" style="border-radius: 10px;">
+        <div class="card" style="border-radius: 10px;text-align: justify;">
             <div class="card-header" style="border-radius: 10px 10px 0px 0px;">
                 <h3 class="mb-0"><i class="bi bi-briefcase"></i> Professional Experience</h3>
             </div>

@@ -154,6 +154,8 @@ st.markdown("""
                         <div class="mb-2"><span class="badge bg-secondary">Pandas</span></div>
                         <div class="mb-2"><span class="badge bg-success">FastF1 API</span></div>
                         <div class="mb-2"><span class="badge bg-info">NumPy</span></div>
+                        <div class="mb-2"><span class="badge bg-info">R</span></div>
+                        <div class="mb-2"><span class="badge bg-info">SQL</span></div>
                     </div>
                     <div class="col-md-4 mb-3 text-center">
                         <h5 class="text-secondary mb-3">Frontend & Visualization</h5>

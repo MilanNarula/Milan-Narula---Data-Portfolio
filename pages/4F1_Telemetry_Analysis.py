@@ -414,7 +414,7 @@ with tab2:
                 )
                 st.plotly_chart(fig_track, use_container_width=True, key="track_plot")
                 
-                            # Additional insights
+                # Additional insights
                 st.markdown("""
                 <div class="container mt-4">
                     <div class="row">

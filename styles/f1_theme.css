@@ -57,7 +57,7 @@ Handles Plotly integration and data visualization styling
 
 /* F1 Track Map Styling */
 .track-container {
-    max-height: fit-content;
+    max-height: 100px;
     background: var(--f1-light);
     border-radius: 15px;
     padding: 1rem;
