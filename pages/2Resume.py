@@ -283,17 +283,16 @@ def display_interactive_resume():
                         <h4 class="text-primary">Intern</h4>
                         <h5 class="text-secondary mb-1">Various</h5>
                         <ul class="text-light">
-                            <li>KPMG</li>
-                            <li>HSBC</li>
-                            <li>Accenture</li>
-                            <li>MBPD & Thales</li>
+                            <li>Completed internships across Thales, MBPD, KPMG, HSBC, Accenture, building exposure in analytics and consulting.</li>
+                            <li>Contributed to real-world projects, strengthening data, engineering, and stakeholder skills early in career.</li>
+                            <li>Practiced agile teamwork, documentation, and version control fundamentals for delivery readiness.</li>
+                            <li>Established a foundation for later leadership in analytics and productized solutions.</li>
                         </ul>
                     </div>
                     <div class="col-md-4">
                         <div class="bg-dark p-3 rounded">
-                            <img src="data:image/png;base64,{kpmg_base64}" alt="RBA Logo" style="width: 90px; height: auto; margin-bottom: 10px; border-radius: 3px; float: right;">
-                            <p class="text-primary mb-2"><strong>2019 - 2021</strong></p>
-                            <p class="text-muted mb-2">Boston, MA</p>
+                            <p class="text-primary mb-2"><strong>2018 - 2019</strong></p>
+                            <p class="text-muted mb-2">Asia Pacific</p>
                             <div>
                                 <span class="badge bg-danger me-1 mb-1">R</span>
                                 <span class="badge bg-warning text-dark me-1 mb-1">Tableau</span>

@@ -23,7 +23,7 @@ st.markdown("""
             Welcome to Milan Narula's Data Analytics Portfolio
         </h1>
         <p class="lead fs-4 mb-4">
-            Your gateway into my analytical intersts and my passion for Formula!
+            Your gateway into my analytical intersts and my passion for Formula 1!
         </p>
         <p class="fs-5 text-muted mb-5">
             Explore my interactive projects, take a look at my resume if you're a recruiter
@@ -141,12 +141,12 @@ st.markdown("""
 # Technology Stack
 st.markdown("""
 <div class="container mt-5">
+    <h2 class="text-center mb-5" style="color: var(--f1-primary);">
+        Technology Stack
+    </h2>
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="project-card">
-                <h3 class="text-primary mb-4 text-center">
-                    Technology Stack
-                </h3>
                 <div class="row">
                     <div class="col-md-4 mb-3 text-center">
                         <h5 class="text-secondary mb-3">Backend & Analysis</h5>
